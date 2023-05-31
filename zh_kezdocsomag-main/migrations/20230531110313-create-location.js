@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.FLOAT
       },
       public: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.BOOLEAN,
         defaultValue: true
       },

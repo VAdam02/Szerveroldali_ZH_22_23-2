@@ -23,7 +23,7 @@ module.exports = {
             type: Sequelize.INTEGER,
             allowNull: false,
             references: {
-                model: "Warning",
+                model: "Warnings",
                 key: "id",
             },
             onDelete: "cascade",
@@ -40,6 +40,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('WeatherWarnings');
+    await queryInterface.dropTable('WarningsWeather');
   }
 };
