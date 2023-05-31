@@ -11,6 +11,7 @@ module.exports = {
       },
       name: {
         allowNull: false,
+        unique: true,
         type: Sequelize.STRING
       },
       lat: {
@@ -23,7 +24,8 @@ module.exports = {
       },
       public: {
         allowNull: false,
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,
