@@ -5,5 +5,40 @@ type Query {
     # Példa paraméterezésre:
     helloName(name: String!): String
 
-    # TODO: Készítsd el a schema hiányzó részeit
+    locations: [Location]!
+    weather: [Weather]!
+
+    location(id:Int!): Location!
+}
+
+type Mutation {
+    createWeather(input: CreateWeatherInput!): Weather
+}
+
+input CreateWeatherInput {
+    type: String!
+    LocationId: Int!
+    temp: Float!
+    loggedAt: DateTime!
+}
+
+type Location {
+    id: ID!
+    name: String!
+    lat: Float!
+    lon: Float!
+    public: Boolean!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+}
+
+type Weather {
+    id: ID!
+    type: String!
+    location: Location!
+    LocationId: Int!
+    temp: Float!
+    loggedAt: DateTime!
+    createdAt: DateTime!
+    updatedAt: DateTime!
 }
