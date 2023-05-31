@@ -10,15 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lat: {
+        allowNull: false,
         type: Sequelize.FLOAT
       },
       lon: {
+        allowNull: false,
         type: Sequelize.FLOAT
       },
       public: {
+        allowNull: false,
         type: Sequelize.BOOLEAN
       },
       createdAt: {

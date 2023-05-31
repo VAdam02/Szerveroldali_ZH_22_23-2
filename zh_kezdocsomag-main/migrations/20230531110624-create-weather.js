@@ -10,15 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       LocationId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       temp: {
+        allowNull: false,
         type: Sequelize.FLOAT
       },
       loggedAt: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       createdAt: {
