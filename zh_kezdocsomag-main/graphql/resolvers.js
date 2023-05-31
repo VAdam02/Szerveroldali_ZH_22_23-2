@@ -27,5 +27,10 @@ module.exports = {
 
     Mutation: {
         createWeather: async (_, { input }) => await Weather.create(input)
+    },
+
+    Weather: {
+        location: async (weather) => await weather.getLocation(),
+        warnings: async (weather) => await weather.getWarnings()
     }
 };

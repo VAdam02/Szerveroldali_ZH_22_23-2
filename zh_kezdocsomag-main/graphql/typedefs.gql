@@ -37,8 +37,17 @@ type Weather {
     type: String!
     location: Location!
     LocationId: Int!
+    warnings: [Warning]!
     temp: Float!
     loggedAt: DateTime!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+}
+
+type Warning {
+    id: ID!
+    level: Int!
+    message: String
     createdAt: DateTime!
     updatedAt: DateTime!
 }
